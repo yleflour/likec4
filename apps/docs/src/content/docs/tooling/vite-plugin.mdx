@@ -261,7 +261,9 @@ const { languageServices } = await LikeC4.fromSource(`
 
 export default defineConfig({
   plugins: [
-    react(),
+    react({
+      exclude: [/^likec4:/],
+    }),
     LikeC4VitePlugin({
       languageServices,
     }),
